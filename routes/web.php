@@ -18,3 +18,9 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
+
+Route::resource('/task', 'TaskController');
+
+Route::resource('/post', 'PostController');
+
+Route::post('/post/{post}/comment', 'CommentsController@store');

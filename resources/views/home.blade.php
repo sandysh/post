@@ -6,9 +6,13 @@
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
                 <div class="panel-heading">Dashboard</div>
-
+                    
                 <div class="panel-body">
-                    You are logged in!
+                    <ul>
+                        @foreach($tasks as $task)
+                          <li><a href="/tasks/{$task->id}">{{$task->body}}</a></li>
+                        @endforeach
+                    </ul>
                 </div>
             </div>
         </div>
